@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        
+        <script type="text/javascript" src="cordova.js"></script>
+    
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css">
+        <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+        
+        <title>Exchange</title>
+    </head>
+    <body>
+        <div data-role="page" id="pageone">
+
+        <div data-role="header">
+            <h1>Exchange: Market Order</h1>
+        <a href="javascript:history.back()" data-role="button" data-rel="back" data-icon="arrow-l">Back</a>
+        </div>
+        
+        <h2>Current Orders</h2>
+        
+        <div data-role="main" class="ui-content">
+        <form method="post" action="exchange(result).html">
+            
+                    You have: <input type="number" name="ccy_have" id="ccy_have">
+                <fieldset class="ui-field-contain">
+                    <label for="currency">Select Currency</label>
+                    <select name="currency" id="currency" data-native-menu="false">
+                        <option value="USD">USD</option>
+                        <option value="HKD">HKD</option>
+                        <option value="EUR">EUR</option>
+                        <option value="RMB">RMB</option>
+                    </select>
+                </fieldset>
+                    <br/>
+                    You want: <input type="number" name="ccy_want" id="ccy_want" placeholder="Adjust according to the rate user choose in below table">
+                    <fieldset class="ui-field-contain">
+                        <label for="currency">Select Currency</label>
+                        <select name="currency" id="currency" data-native-menu="false">
+                            <option value="USD">USD</option>
+                            <option value="HKD">HKD</option>
+                            <option value="EUR">EUR</option>
+                            <option value="RMB">RMB</option>
+                        </select>
+                    </fieldset>
+                    <br/>
+                    <input type="submit" data-inline="true" value="Submit">
+                            
+        </form>
+        
+        
+        <table data-role="table" class="ui-responsive ui-shadow" id="myTable" border="1">
+            <thead>
+                <tr>
+                    <th data-priority="1">Select</th>
+                    <th data-priority="1">Rate</th>
+                    <th data-priority="2">Amount</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td><input type="radio" name="group1" value="HSBC"></td> <td>0.12</td> <td>1000</td></tr>
+                <tr><td><input type="radio" name="group1" value="SCB"></td> <td>0.13</td> <td>20000</td></tr>
+                <tr><td><input type="radio" name="group1" value="BEA"></td> <td>0.135</td> <td>500000</td></tr>
+            </tbody>
+        </table>
+
+        </div>
+        </div>
+    </body>
+</html>
