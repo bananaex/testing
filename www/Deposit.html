@@ -28,8 +28,8 @@
         <form method="post" action="deposit(bank info).html">
             
             <fieldset class="ui-field-contain">
-                <label for="day">Select Currency</label>
-                <select name="day" id="day" data-native-menu="false">
+                <label for="currency">Select Currency</label>
+                <select name="currency" id="currency" data-native-menu="false">
                     <option value="mon">USD</option>
                     <option value="tue">HKD</option>
                     <option value="wed">EUR</option>
@@ -40,7 +40,20 @@
             
             <label for="amount">Amount</label>
             <input type="range" name="amount" id="amount" value="1000" min="100" max="10000">
-            <input type="submit" data-inline="true" value="Submit">
+
+<br/>
+Bank that you will transfer the deposit from: <input type="text" name="incoming bank" id="incoming bank">
+    <br/>
+    Account Name: <input type="text" name="incoming bank" id="incoming bank">
+
+<label for="flip-1">Save for future use:</label>
+<select name="flip-1" id="flip-1" data-role="slider">
+	<option value="notsave">Not Save</option>
+	<option selected="selected" value="save">Save</option>
+</select>
+<br/>
+
+<input type="submit" data-inline="true" value="Submit">
 
         </form>
         

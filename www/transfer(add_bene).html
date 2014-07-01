@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+            <script type="text/javascript" src="cordova.js"></script>
+            
+            <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css">
+                <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+                <script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+  
+    </head>
+    <body>
+        <div data-role="page" id="pageone">
+
+        <div data-role="header">
+            <h1>Transfer - Add Beneficiary</h1>
+            <a href="javascript:history.back()" data-role="button" data-rel="back" data-icon="arrow-l">Back</a>
+        </div>
+
+            <div data-role="main" class="ui-content">
+                <form method="post" action="transfer(result).html">
+                    <fieldset class="ui-field-contain">
+                        <label for="benebank">Bene Bank Name:</label>
+                        <select name="benebank" id="benebank" data-native-menu="false">
+                            <option value="hsbc">HSBC</option>
+                            <option value="scb">SCB</option>
+                            <option value="bea">BEA</option>
+                            <option value="WH">Wing Hung</option>
+                        </select>
+                    </fieldset>
+                    <br/>
+                    Bene Name:<input type="text" name="bene_name" id="bene_name">
+                    Account Number: <input type="text" name="acc_no" id="acc_no">
+                    <br/>
+                    <input type="submit" data-inline="true" value="Save">
+                </form>
+                
+                <br/>
+                Existing Accounts
+                <table data-role="table" class="ui-responsive ui-shadow" id="myTable">
+                    <thead>
+                        <tr>
+                            <th data-priority="2">Bank Name</th>
+                            <th data-priority="3">Beneficiary Name</th>
+                            <th data-priority="1">Account Number</th>
+                            <th data-priority="1">Action</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>HSBC</td>
+                            <td>ABC</td>
+                            <td>0128743927493</td>
+                            <td><a href="#">Edit</a> or <a href="#">Delete</a></td>
+                        </tr>
+                        <tr>
+                            <td>Standard Chartered</td>
+                            <td>013</td>
+                            <td>rer</td>
+                            <td><a href="#">Edit</a> or <a href="#">Delete</a></td>
+                        </tr>
+                        <tr>
+                            <td>BEA</td>
+                            <td>014</td>
+                            <td>vcxvc</td>
+                            <td><a href="#">Edit</a> or <a href="#">Delete</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        -->
+    </body>
+</html>

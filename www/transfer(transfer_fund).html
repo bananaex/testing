@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+            <script type="text/javascript" src="cordova.js"></script>
+            
+            <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css">
+                <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+                <script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+    </head>
+    <body>
+        <div data-role="page">
+            
+        <div data-role="header">
+            <h1>Transfer Fund</h1>
+            <a href="javascript:history.back()" data-role="button" data-rel="back" data-icon="arrow-l">Back</a>
+        </div>
+        
+            <form name="myform" action="transfer(confirm).html" method="POST">
+                <div align="left"><br>
+                    <table data-role="table" class="ui-responsive ui-shadow" id="myTable">
+                    <thead>
+                        <tr>
+                            <th data-priority="2">Bank Name</th>
+                            <th data-priority="3">Beneficiary Name</th>
+                            <th data-priority="1">Account Number</th>
+                            <th data-priority="1">Action</th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><input type="radio" name="group1" value="Milk"></td> <td>HSBC</td> <td>1234455</td> <td>Bene: abc</td></tr>
+                        <tr><td><input type="radio" name="group1" value="Milk"></td> <td>SCB</td> <td>1234455</td> <td>Bene: abc</td></tr>
+                        <tr><td><input type="radio" name="group1" value="Milk"></td> <td>BEA</td> <td>1234455</td> <td>Bene: abc</td></tr>
+                    </tbody>
+                    </table>
+                </div>
+                Amount: <input type="number"> </br>
+                <input type="submit" data-inline="true" value="Submit">
+            </form>
+            </div>
+        </div>
+        
+    </body>
+</html>
